@@ -14,10 +14,11 @@ Mathlib, which is why it is a project of its own: the decider builds in seconds 
     $ lake exe cache get   # Mathlib's prebuilt artifacts
     $ lake build           # then Foundation and ProvabilityLogic, from source: slow, once
 
-`lake-manifest.json` pins the commit of `decide-provability` that is built against; after
-the decider changes, `lake update decide-provability` moves it to the head of `main`. The
-[Lean REPL](https://github.com/augustepoiroux/repl) is required at the tag for this project's
-toolchain, so the two move together.
+`decide-provability` is required at `main`, and `lake-manifest.json` is not committed, so a
+fresh checkout builds against the decider's latest commit; an older checkout moves to it with
+`lake update decide-provability`. Everything else is pinned in the lakefile: `ProvabilityLogic`
+to a commit, and with it Mathlib, and the [Lean REPL](https://github.com/augustepoiroux/repl)
+to the tag for this project's toolchain, so the two move together.
 
 The wrapper runs the REPL in this project, with `GLVerify` imported once, which takes a
 couple of seconds, most of it Mathlib, and has it evaluate Lean: the tableau that a Lean file
