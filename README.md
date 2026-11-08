@@ -16,8 +16,10 @@ Mathlib, which is why it is a project of its own: the decider builds in seconds 
 
 `decide-provability` is required at `main`, and `lake-manifest.json` is not committed, so a
 fresh checkout builds against the decider's latest commit; an older checkout moves to it with
-`lake update decide-provability`. Everything else is pinned in the lakefile: `ProvabilityLogic`
-to a commit, and with it Mathlib, and the [Lean REPL](https://github.com/augustepoiroux/repl)
+`lake update decide-provability`. As `lake update` raises this project's toolchain to the newest
+of its dependencies', the decider's must be no newer than Mathlib's. Everything else is pinned
+in the lakefile: `ProvabilityLogic` to a commit, and with it Mathlib, and the
+[Lean REPL](https://github.com/augustepoiroux/repl)
 to the tag for this project's toolchain, so the two move together.
 
 The wrapper runs the REPL in this project, with `GLVerify` imported once, which takes a
