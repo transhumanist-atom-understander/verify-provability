@@ -1,12 +1,28 @@
 {
  "version": "1.2.0",
- "packagesDir": "../ProvabilityLogic/.lake/packages",
+ "packagesDir": ".lake/packages",
  "packages": [
   {
-   "type": "path",
-   "dir": "../ProvabilityLogic",
+   "url": "https://github.com/transhumanist-atom-understander/decide-provability",
+   "type": "git",
+   "subDir": null,
+   "scope": "",
+   "rev": "9cf0291d7920bc8efe2c0d24ba50cfea523680b4",
+   "name": "«decide-provability»",
+   "manifestFile": "lake-manifest.json",
+   "inputRev": "main",
+   "inherited": false,
+   "configFile": "lakefile.toml"
+  },
+  {
+   "url": "https://github.com/FormalizedFormalLogic/ProvabilityLogic",
+   "type": "git",
+   "subDir": null,
+   "scope": "",
+   "rev": "60c41f4e6b1914b5f24f498d47c2cb8c003160f6",
    "name": "ProvabilityLogic",
    "manifestFile": "lake-manifest.json",
+   "inputRev": "60c41f4e6b1914b5f24f498d47c2cb8c003160f6",
    "inherited": false,
    "configFile": "lakefile.toml"
   },
@@ -64,7 +80,7 @@
    "subDir": null,
    "scope": "leanprover",
    "rev": "a6521b2d0c93dcdf2d640089f95548df5dd8bf46",
-   "name": "\u00abdoc-gen4\u00bb",
+   "name": "«doc-gen4»",
    "manifestFile": "lake-manifest.json",
    "inputRev": "v4.34.0",
    "inherited": true,
@@ -203,7 +219,7 @@
    "configFile": "lakefile.lean"
   }
  ],
- "name": "\u00abgl-tableau\u00bb",
+ "name": "«verify-provability»",
  "lakeDir": ".lake",
  "fixedToolchain": false
 }

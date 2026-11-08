@@ -1,4 +1,4 @@
-import GLTableau.Tableau
+import GLTableau
 import ProvabilityLogic.Logic.GL.Basic
 
 /-!
