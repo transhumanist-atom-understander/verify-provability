@@ -217,6 +217,18 @@
    "inputRev": "main",
    "inherited": true,
    "configFile": "lakefile.lean"
+  },
+  {
+   "url": "https://github.com/augustepoiroux/repl",
+   "type": "git",
+   "subDir": null,
+   "scope": "",
+   "rev": "561e72a855044c13bac40c405ae084970801ab6c",
+   "name": "REPL",
+   "manifestFile": "lake-manifest.json",
+   "inputRev": "v1.3.19_lean-toolchain-v4.34.0",
+   "inherited": false,
+   "configFile": "lakefile.toml"
   }
  ],
  "name": "«verify-provability»",

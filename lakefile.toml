@@ -1,5 +1,5 @@
 name = "verify-provability"
-defaultTargets = ["GLVerify", "verify"]
+defaultTargets = ["GLVerify"]
 
 [[require]]
 name = "decide-provability"
@@ -11,12 +11,12 @@ name = "ProvabilityLogic"
 git = "https://github.com/FormalizedFormalLogic/ProvabilityLogic"
 rev = "60c41f4e6b1914b5f24f498d47c2cb8c003160f6"
 
+# The Lean REPL that the Python package `lean-interact` drives, at the tag for this toolchain:
+# the wrapper runs it in this project, with `GLVerify` imported.
+[[require]]
+name = "REPL"
+git = "https://github.com/augustepoiroux/repl"
+rev = "v1.3.19_lean-toolchain-v4.34.0"
+
 [[lean_lib]]
 name = "GLVerify"
-
-# The server imports `GLVerify` at run time, into the environment it checks tableaux in, so
-# it links neither it nor Mathlib.
-[[lean_exe]]
-name = "verify"
-root = "Main"
-supportInterpreter = true
